@@ -1,12 +1,9 @@
 # STEP 1: Take a sorted list as input
 a = list(map(int, input("Enter sorted numbers: ").split()))  # a → sorted list
-
 # STEP 2: Take the element to be searched
 x = int(input("Enter element to search: "))                  # x → target value
-
 # STEP 3: Initialize left and right pointers
 l, r = 0, len(a) - 1     # l → left index, r → right index
-
 # STEP 4: Repeat until the search space is valid
 while l <= r:
     m = (l + r) // 2    # STEP 5: Find middle index
