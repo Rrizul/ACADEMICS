@@ -13,5 +13,5 @@ def max_min_sort(arr):
 # take input
 numbers = list(map(int, input("Enter numbers: ").split()))
 # sort using max-min logic
-sorted_list = max_min_sort(numbers)
-print("Sorted list:", sorted_list)
+list = max_min_sort(numbers)
+print("Sorted list:",list)
