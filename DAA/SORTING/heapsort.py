@@ -20,6 +20,6 @@ def heap_sort(arr):
         heapify(arr, i, 0)
 
 # -------- Runtime Input --------
-arr = list(map(int, input("Enter elements separated by space: ").split()))
+arr = list(map(int, input("Enter elements :").split()))
 heap_sort(arr)
-print("Sorted array:", arr)
+print("Sorted array:",arr)
