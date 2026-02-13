@@ -7,4 +7,4 @@ for i in range(n):
         if a[j] > a[j + 1]:
             a[j], a[j + 1] = a[j + 1], a[j]  # swap
 # Print result
-print("Sorted list:", a)
+print("Sorted list data:", a)
