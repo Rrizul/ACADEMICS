@@ -21,7 +21,7 @@ def merge(a, s, m, e):
     a[k:e+1] = L[i:] + R[j:]     # add remaining values
     
 # Take input from user
-a = list(map(int, input("Enter numbers: ").split()))
+a = list(map(int, input("Enter numbers of array: ").split()))
 # Apply merge sort
 merge_sort(a, 0, len(a)-1)
 # Print result
