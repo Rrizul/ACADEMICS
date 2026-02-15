@@ -4,7 +4,6 @@ def merge_sort(a, s, e):          # sort array from index s to e
         merge_sort(a, s, m)      # sort left part
         merge_sort(a, m+1, e)    # sort right part
         merge(a, s, m, e)        # merge both parts
-
 def merge(a, s, m, e):
     L = a[s:m+1]                 # copy left half
     R = a[m+1:e+1]               # copy right half
@@ -19,7 +18,6 @@ def merge(a, s, m, e):
             j += 1
         k += 1                  # move main pointer
     a[k:e+1] = L[i:] + R[j:]     # add remaining values  
-    
 # Take input from user
 a = list(map(int, input("Enter numbers: ").split()))
 # Apply merge sort
