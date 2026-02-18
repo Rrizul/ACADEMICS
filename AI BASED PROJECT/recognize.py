@@ -69,10 +69,7 @@ while True:
             frame, hand, mp_hands.HAND_CONNECTIONS
         )
 
-
-
     cv2.imshow("Gesture Recognition (Memory + Stable)", frame)
-
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 cap.release()
