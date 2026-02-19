@@ -1,4 +1,3 @@
-
 import cv2
 import mediapipe as mp
 import json
@@ -11,7 +10,11 @@ hands = mp_hands.Hands(
     min_tracking_confidence=0.75,
 )
 
+
+
 cap = cv2.VideoCapture(0)
+
+
 
 GESTURES = {
     "1": "ONE",
