@@ -9,13 +9,7 @@ hands = mp_hands.Hands(
     min_detection_confidence=0.75,
     min_tracking_confidence=0.75,
 )
-
-
-
 cap = cv2.VideoCapture(0)
-
-
-
 GESTURES = {
     "1": "ONE",
     "2": "TWO",
@@ -61,6 +55,7 @@ while True:
 
 with open("gesture_memory.json", "w") as f:
     json.dump(memory, f)
+
 
 cap.release()
 cv2.destroyAllWindows()
