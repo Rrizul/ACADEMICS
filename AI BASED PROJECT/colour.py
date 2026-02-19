@@ -68,6 +68,26 @@ def create_particles(x, y, color):
         )
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 while True:
     ret, frame = cap.read()
     if not ret:
@@ -145,6 +165,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows() 
-
-
-
