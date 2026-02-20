@@ -11,8 +11,6 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 particles = []
 last_time = 0
 COOLDOWN = 0.4
-
-
 def extract_features(cnt):
     area = cv2.contourArea(cnt)
     if area < 8000:
@@ -39,8 +37,6 @@ def extract_features(cnt):
         defect_count = 0
 
     return np.array([ratio, defect_count, aspect])
-
-
 def classify(feat):
     best_label = None
     best_dist = 1e9
@@ -52,8 +48,6 @@ def classify(feat):
             best_label = label
 
     return best_label
-
-
 def create_particles(x, y, color):
     for _ in range(35):
         particles.append(
@@ -66,28 +60,6 @@ def create_particles(x, y, color):
                 "color": color,
             }
         )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 while True:
     ret, frame = cap.read()
     if not ret:
