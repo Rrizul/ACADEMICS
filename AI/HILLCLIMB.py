@@ -10,7 +10,7 @@ graph = {
 
 # Heuristic values (lower value = better state)
 heuristic = {'A': 6,'B': 4,'C': 5,'D': 3,'E': 2,'F': 1,'G': 0}
-'''
+
 # 1. Simple Hill Climbing (Descent)
 def simple_hill_climbing(start):
     current = start
@@ -30,8 +30,8 @@ def simple_hill_climbing(start):
             # stuck at local minimum
             return current, path
         
-'''
-'''
+
+
 # 2. Steepest Descent Hill Climbing
 def steepest_hill_climbing(start):
     current = start
@@ -53,7 +53,7 @@ def steepest_hill_climbing(start):
         path.append(current)
 
     return current, path
-'''
+
 # 3. Stochastic Hill Climbing (Descent)
 def stochastic_hill_climbing(start):
     current = start
@@ -77,12 +77,12 @@ def stochastic_hill_climbing(start):
     return current, path
 
 start = 'A'
-'''
+
 result, path = simple_hill_climbing(start)
 print("Simple HC Path:", " > ".join(path), "| Stuck at:", result)
 
 result, path = steepest_hill_climbing(start)
 print("Steepest HC Path:", " > ".join(path), "| Stuck at:", result)
-'''
+
 result, path = stochastic_hill_climbing(start)
 print("Stochastic HC Path:", " > ".join(path), "| Final:", result)
