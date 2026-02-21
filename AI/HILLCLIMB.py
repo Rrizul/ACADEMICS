@@ -7,6 +7,7 @@ graph = {
     'C': ['F'],
     'F': ['G']
 }
+
 # Heuristic values (lower value = better state)
 heuristic = {'A': 6,'B': 4,'C': 5,'D': 3,'E': 2,'F': 1,'G': 0}
 
