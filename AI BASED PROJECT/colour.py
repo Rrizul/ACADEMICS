@@ -6,7 +6,7 @@ import time
 
 with open("gesture_memory.json") as f:
     gesture_db = json.load(f)
-
+    
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 particles = []
 last_time = 0
