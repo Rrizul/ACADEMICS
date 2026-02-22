@@ -29,8 +29,6 @@ def simple_hill_climbing(start):
         if not moved:
             # stuck at local minimum
             return current, path
-        
-
 
 # 2. Steepest Descent Hill Climbing
 def steepest_hill_climbing(start):
