@@ -11,43 +11,19 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 particles = []
 last_time = 0
 COOLDOWN = 0.4
-def extract_features(cnt):
-    area = cv2.contourArea(cnt)
-    if area < 8000:
-        return None
 
-    hull = cv2.convexHull(cnt)
-    hull_area = cv2.contourArea(hull)
-    if hull_area == 0:
-        return None
 
-    ratio = hull_area / area
 
-    x, y, w, h = cv2.boundingRect(cnt)
-    aspect = w / h if h != 0 else 0
 
-    defect_count = 0
-    try:
-        hull_idx = cv2.convexHull(cnt, returnPoints=False)
-        if hull_idx is not None and len(hull_idx) > 3:
-            defects = cv2.convexityDefects(cnt, hull_idx)
-            if defects is not None:
-                defect_count = defects.shape[0]
-    except cv2.error:
-        defect_count = 0
 
-    return np.array([ratio, defect_count, aspect])
-def classify(feat):
-    best_label = None
-    best_dist = 1e9
 
-    for label, ref in gesture_db.items():
-        dist = np.linalg.norm(feat - np.array(ref))
-        if dist < best_dist:
-            best_dist = dist
-            best_label = label
 
-    return best_label
+
+
+
+
+
+
 def create_particles(x, y, color):
     for _ in range(35):
         particles.append(
@@ -134,14 +110,6 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break   
-    
-    
-    
-    
-    
-    
-    
-    
-
+ 
 cap.release()
 cv2.destroyAllWindows() 
