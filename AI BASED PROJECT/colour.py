@@ -123,6 +123,10 @@ while True:
         p["y"] += p["vy"]
         p["life"] -= 1
 
+
+
+
+
         if p["life"] <= 0:
             particles.remove(p)
             continue
