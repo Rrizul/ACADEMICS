@@ -74,11 +74,14 @@ while True:
         np.array([20, 170, 255]),
     )
 
+
     contours, _ = cv2.findContours(
         mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
     )
 
+
     overlay = frame.copy()
+
 
     if contours:
         cnt = max(contours, key=cv2.contourArea)
