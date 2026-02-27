@@ -7,6 +7,14 @@ import json
 with open("gesture_memory.json", "r") as f:
     memory = json.load(f)
 
+
+
+
+
+
+
+
+
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(
     max_num_hands=1,
