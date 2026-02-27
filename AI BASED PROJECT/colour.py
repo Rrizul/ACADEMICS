@@ -23,37 +23,6 @@ def extract_features(cnt):
 
     ratio = hull_area / area
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     x, y, w, h = cv2.boundingRect(cnt)
     aspect = w / h if h != 0 else 0
 
