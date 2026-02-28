@@ -14,6 +14,18 @@ hands = mp_hands.Hands(
     min_tracking_confidence=0.75,
 )
 
+
+
+
+
+
+
+
+
+
+
+
+
 cap = cv2.VideoCapture(0)
 
 def extract_vector(hand):
