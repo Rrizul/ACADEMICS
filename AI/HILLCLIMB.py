@@ -79,3 +79,13 @@ def stochastic_hill_climbing(start):
     return current, path
 
 
+start = 'A'
+
+result, path = simple_hill_climbing(start)
+print("Simple HC Path:", " > ".join(path), "| Stuck at:", result)
+
+result, path = steepest_hill_climbing(start)
+print("Steepest HC Path:", " > ".join(path), "| Stuck at:", result)
+
+result, path = stochastic_hill_climbing(start)
+print("Stochastic HC Path:", " > ".join(path), "| Final:", result)
