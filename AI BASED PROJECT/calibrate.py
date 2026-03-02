@@ -17,15 +17,6 @@ GESTURES = {
     "4": "FOUR",
     "5": "OPEN",
 }
-
-
-
-
-
-
-
-
-
 memory = {}
 
 def extract_vector(hand):
@@ -65,3 +56,4 @@ with open("gesture_memory.json", "w") as f:
     json.dump(memory, f)
 cap.release()
 cv2.destroyAllWindows()
+
