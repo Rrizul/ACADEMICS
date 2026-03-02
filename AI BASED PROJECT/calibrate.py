@@ -18,6 +18,14 @@ GESTURES = {
     "5": "OPEN",
 }
 
+
+
+
+
+
+
+
+
 memory = {}
 
 def extract_vector(hand):
