@@ -52,21 +52,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 with open("gesture_memory.json", "w") as f:
     json.dump(memory, f)
 cap.release()
 cv2.destroyAllWindows()
-
