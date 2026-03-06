@@ -56,3 +56,22 @@ with open("gesture_memory.json", "w") as f:
     json.dump(memory, f)
 cap.release()
 cv2.destroyAllWindows()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
