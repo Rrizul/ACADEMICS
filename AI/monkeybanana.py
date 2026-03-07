@@ -1,41 +1,65 @@
- # Monkey Banana Problem (Simple Version)
+# Monkey Banana Problem (Very Easy Version)
 
-# Initial positions
-monkey = 'A'
-chair = 'B'
-banana = 'C'
+def show_state(monkey, chair, on_chair, has_banana):
+    if on_chair:
+        on = "t"
+    else:
+        on = "f"
+
+    if has_banana:
+        hb = "t"
+    else:
+        hb = "f"
+
+    print("{Monkey, Chair, On the chair, has banana}={" +
+          monkey.lower() + "," + chair.lower() + "," + on + "," + hb + "}")
+
+
+def move(monkey, chair, on_chair, has_banana):
+    print("\nAction performed: Move")
+    monkey = chair
+    show_state(monkey, chair, on_chair, has_banana)
+    return monkey, chair, on_chair, has_banana
+
+
+def push(monkey, chair, banana, on_chair, has_banana):
+    print("\nAction performed: Push")
+    monkey = banana
+    chair = banana
+    show_state(monkey, chair, on_chair, has_banana)
+    return monkey, chair, on_chair, has_banana
+
+
+def climb(monkey, chair, on_chair, has_banana):
+    print("\nAction performed: Climb")
+    on_chair = True
+    show_state(monkey, chair, on_chair, has_banana)
+    return monkey, chair, on_chair, has_banana
+
+
+def grab(monkey, chair, on_chair, has_banana):
+    print("\nAction performed: Grab")
+    has_banana = True
+    print("Goal state:")
+    show_state(monkey, chair, on_chair, has_banana)
+
+
+# Initial state
+monkey = "A"
+chair = "B"
+banana = "C"
 on_chair = False
 has_banana = False
 
 print("Initial state")
-print("Monkey =", monkey)
-print("Chair =", chair)
-print("Banana =", banana)
-print("On the chair =", on_chair)
-print("Has banana =", has_banana)
+print("Monkey=A")
+print("Chair=B")
 
 print("\nInitial state space:")
-print("{Monkey, Chair, On the chair, has banana} = {a,b,f,f}")
+show_state(monkey, chair, on_chair, has_banana)
 
-# Step 1: Monkey moves to chair
-print("\nAction performed: Move")
-monkey = chair
-print("Next state space:")
-print("{Monkey, Chair, On the chair, has banana} = {b,b,f,f}")
-
-# Step 2: Monkey pushes chair to banana
-print("\nAction performed: Push")
-monkey = banana
-chair = banana
-print("{Monkey, Chair, On the chair, has banana} = {c,c,f,f}")
-
-# Step 3: Monkey climbs chair
-print("\nAction performed: Climb")
-on_chair = True
-print("{Monkey, Chair, On the chair, has banana} = {c,c,t,f}")
-
-# Step 4: Monkey grabs banana
-print("\nAction performed: Grab")
-has_banana = True
-print("Goal state:")
-print("{Monkey, Chair, On the chair, has banana} = {c,c,t,t}")
+# Steps
+monkey, chair, on_chair, has_banana = move(monkey, chair, on_chair, has_banana)
+monkey, chair, on_chair, has_banana = push(monkey, chair, banana, on_chair, has_banana)
+monkey, chair, on_chair, has_banana = climb(monkey, chair, on_chair, has_banana)
+grab(monkey, chair, on_chair, has_banana)
