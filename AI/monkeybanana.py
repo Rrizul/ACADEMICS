@@ -63,3 +63,27 @@ monkey, chair, on_chair, has_banana = move(monkey, chair, on_chair, has_banana)
 monkey, chair, on_chair, has_banana = push(monkey, chair, banana, on_chair, has_banana)
 monkey, chair, on_chair, has_banana = climb(monkey, chair, on_chair, has_banana)
 grab(monkey, chair, on_chair, has_banana)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
